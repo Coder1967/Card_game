@@ -1,0 +1,1 @@
+A simple game of luck. you bet your against an opponent and the winner takes a certain amount of points from the loser. You can choose to not play for that round if you are unsure but doing so gives some points to the opponent.
