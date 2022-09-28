@@ -26,7 +26,9 @@ int main(int argc, char *argv[])
 			printf("These are your cards\n");
 			sleep(1);
 			for (i = 0; i < 5; i++)
-				printf("%i ", my_card[i]);
+			{
+				printf("|%i| ", my_card[i]);
+			}
 			putchar('\n');
 			i = 0;
 			/* generates random number for the opponent's card*/
@@ -50,7 +52,9 @@ int main(int argc, char *argv[])
 			printf("opponent's' cards\n");
 			sleep(1);
 			for (i = 0; i < 5; i++)
-				printf("%i ", opp_card[i]);
+			{
+				printf("|%i| ", opp_card[i]);
+			}
 			putchar('\n');
 				
 			if (my_total > opp_total)
