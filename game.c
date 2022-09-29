@@ -13,6 +13,7 @@ int main(int argc, char *argv[])
 	int i = 0;
 	
 	srand(time(NULL));
+	/* loop keeps going while both players have points left*/
 	while (opp_score > 0 && my_score > 0)
 	{
 		i = 0;
@@ -46,6 +47,20 @@ int main(int argc, char *argv[])
 		scanf(" %c", &ans);
 		if (ans == 'n' || ans == 'n' - 32)
 		{
+			printf("This was your opponent's card\n");
+			for (i = 0; i < 5; i++)
+			{
+				printf("|%i| ", opp_card[i]);
+			}
+			putchar('\n');
+			if (my_total > opp_total)
+				puts("You would have won");
+			else if (opp_total > my_total)
+				puts("Smart move, you would have lost");
+			else
+			{
+				puts("It would had just been a draw");
+			}
 			my_score -= 25;
 			opp_score += 25;
 			printf("You lost 25pts you have %dpts remaining\n", my_score);
